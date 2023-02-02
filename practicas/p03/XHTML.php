@@ -117,5 +117,23 @@
             ?>
         </li>
     </ol>
+    <h2>Inciso 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de la matriz 
+       $GLOBALS o del modificador global de PHP.
+    </p>
+    <?php
+        $aa = "PHP5";
+        $z[] = &$a;
+        $bb = "5a version de PHP";
+        $aa .= $b;
+        $z[0] = "MySQL";
+        function mostar()
+        {
+            $GLOBALS['m'] = $GLOBALS['aa']."<br>".$GLOBALS['bb'];
+        }
+        mostar();
+        echo $m."<br> Comentario: Los array no se pueden imprimir, ya que la función no puede convertir los valores de 
+        un array a string.";
+    ?>
 </body>
 </html>
