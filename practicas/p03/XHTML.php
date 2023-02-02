@@ -172,5 +172,30 @@
         echo '<br>$f: ';
         var_dump($f);
     ?>
+    <h2>Inciso 7</h2>
+    <p>Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+    <ol type = "a">
+        <li>
+           <p>La versión de Apache y PHP</p>
+           <?php
+                $version = apache_get_version();
+                echo "Versió de apache: $version";
+                echo '<br>Versión actual de PHP: ' . phpversion();
+           ?>
+        </li>
+        <li>
+            <p>El nombre del sistema operativo (servidor)</p>
+            <?php
+                echo php_uname();
+            ?>
+        </li>
+        <li>
+            <p>El idioma del navegador (cliente)</p>
+            <?php
+                $idioma = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+                echo $idioma;
+            ?>
+        </li>
+    </ol>
 </body>
 </html>
