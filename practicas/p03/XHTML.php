@@ -63,5 +63,59 @@
         ?>
     </li>
   </ol>
+  <h2>Inciso 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación,
+        verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+        arreglo):
+    </p>
+    <ol>
+        <li>
+            <?php
+             $a = "PHP5";
+             echo "a = $a <br>";
+            ?>
+        </li>
+        <li>
+            <?php
+             $z[] = &$a;
+             echo '$z[] contiene: ';
+             var_dump($z);
+            ?>
+        </li>
+        <li>
+            <?php
+             $b = " 5a version de PHP";
+             echo '$b = '.$b."<br>";
+            ?>
+        </li>
+        <li>
+            <?php
+             echo '$c = $b*10: Esta asignacion de variable no se puede realizar 
+             ya que un string (cadena de caracteres) no se puede multiplicar 
+             por un int (entero).';
+            ?>
+        </li>
+        <li>
+            <?php
+             $a .= $b;
+             echo "$a<br>".'Comentario: la variable $a se le asigno ahora el valor
+             de la variable $b, a la hora de agregar un punto a la varible que se esta
+             asignando, lo que ocurre es que el valor que se le asigno aparecera dos veces.';
+            ?>
+        </li>
+        <li>
+            <?php
+             echo '$b *= $c: Esta asignación no puede realizarse, ya que en el paso 
+             anterior no se puedo asignar un valor a la variable $c, por las razones
+             ya antes mencionados.<br>';
+            ?>
+        </li>
+        <li>
+            <?php
+             $z[0] = "MySQL";
+             var_dump($z);
+            ?>
+        </li>
+    </ol>
 </body>
 </html>
