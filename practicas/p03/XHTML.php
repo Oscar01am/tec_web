@@ -135,5 +135,16 @@
         echo $m."<br> Comentario: Los array no se pueden imprimir, ya que la función no puede convertir los valores de 
         un array a string.";
     ?>
+    <h2>Inciso 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <?php
+        $a = "7 personas";
+        $b = (integer) $a;
+        $a = "9E3";
+        $c = (double) $a;
+        echo '$a: '.$a.'<br>';
+        echo '$b: '.$b.'<br>';
+        echo '$c: '.$c.'<br>';
+    ?>
 </body>
 </html>
