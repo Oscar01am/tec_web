@@ -146,5 +146,31 @@
         echo '$b: '.$b.'<br>';
         echo '$c: '.$c.'<br>';
     ?>
+    <h2>Inciso 6</h2>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas 
+        usando la función var_dump(<"datos">). 
+        Después investiga una función de PHP que permita transformar el valor booleano de $c y $e 
+        en uno que se pueda mostrar con un echo:
+    </p>
+    <?php
+        $aa = "0";
+        $bb = "TRUE";
+        $c = FALSE;
+        $d = ($a OR $b);
+        $e = ($a AND $c);
+        $f = ($a XOR $b);
+        echo '$a: ';
+        var_dump($aa);
+        echo '<br>$b: ';
+        var_dump($bb);
+        echo '<br>$c: ';
+        var_dump($c);
+        echo '<br>$d: ';
+        var_dump($d);
+        echo '<br>$e: ';
+        var_dump($e);
+        echo '<br>$f: ';
+        var_dump($f);
+    ?>
 </body>
 </html>
