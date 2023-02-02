@@ -21,5 +21,47 @@
   echo '$_element1 es válido, inicia con un guión bajo.<br>';
   // $house*5 = "SEPTIMO"; echo '$house*5 es incorrecta, intenta hacer una multiplicacion con la variable.<br>';
   ?>
+  <h2>Inciso 2</h2>
+        <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
+        <p>$a = "ManejadorSQL";</p>
+        <p>$b = 'MySQL';</p>
+        <p>$c = &$a;</p>
+    <?php
+        $a = "ManejadorSQL<br>";
+        $b = 'MySQL<br>';
+        $c = &$a;
+    ?>
+  <ol type = "a">
+    <li>
+        <p>Ahora muestra el contennido de cada variable</p>
+        <?php
+            echo "a = ".$a;
+            echo "b = ".$b;
+            echo "c = ".$c."<br>";
+        ?>
+    </li>
+    <li>
+        <p>Agrega al código actual las siguientes asignaciones:</p>
+        <?php
+         echo "a = “PHP server”;<br>";
+         echo "b = &a;<br><br>";
+        ?>
+    </li>
+    <li>
+        <p>Vuelve a mostrar el contenido de cada uno:</p>
+        <?php
+         $a = "PHP server<br>";
+         $b = &$a."<br>";
+         echo "a = ".$a;
+         echo "b = ".$b;
+        ?>
+    </li>
+    <li>
+        <p>Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de asignaciones</p>
+        <?php
+            echo "R= No ha habino ningun cambio en los valores de las variables, ya que cada valor de cada variable es diferente."
+        ?>
+    </li>
+  </ol>
 </body>
 </html>
