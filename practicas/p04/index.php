@@ -25,7 +25,7 @@
                 $numero = $_GET['numero'];
                 echo multiplo5y7($numero);
             } else {
-                echo '(vacío)';
+                echo '(vacio)';
             }
             ?>
         </p>
