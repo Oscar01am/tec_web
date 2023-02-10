@@ -69,6 +69,29 @@
         </p>
     </div>
     <hr>
-    
+    <div>
+        <h3>Ejercicio 4</h3>
+        <p>Crear un arreglo cuyos <strong>índices</strong> van de 97 a 122 y cuyos <strong>valores</strong> son las letras de la 'a' a la 'z'. Usa la función <strong>chr(n)</strong> que devuelve el caracter cuyo código ASCII es <strong>n</strong> para poner el valor en cada índice. Es decir:</p>
+        <p>
+            [97] => a <br>
+            [98] => b <br>
+            [99] => c <br>
+            … <br>
+            [122] => z
+        </p>
+        <p>
+            R:
+            <?php
+            $tabla = '<table border>';
+            foreach(codeAscii() as $key => $value){
+                //$tabla .= '<tr>';
+                $tabla .= '<td>' . $key . ' => ' . $value . '</td>';
+                //$tabla .= '</tr>';
+            }
+            $tabla .= '</table>';
+            echo $tabla;
+            ?>
+        </p>
+    </div>
 </body>
 </html>
