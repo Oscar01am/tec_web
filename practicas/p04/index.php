@@ -43,6 +43,32 @@
         </p>
     </div>
     <hr>
+    <div>
+        <h3>Ejercicio 3</h3>
+        <p>Utiliza un ciclo <strong>while</strong> para encontrar el primer número entero obtenido aleatoriamente, pero que además sea múltiplo de un número dado.</p>
+        <p>
+            R:
+            <?php
+             if (!empty($_GET['numero'])) {
+                $numero = $_GET['numero'];
+                echo cicloWhile($numero);
+            } else {
+                echo '(vacio)';
+            }
+            ?>
+            </br>
+        <strong>Crear una variante de este script utilizando el ciclo do-while:</strong>
+            <?php
+            if (!empty($_GET['numero'])) {
+                $numero = $_GET['numero'];
+                echo cicloDoWhile($numero);
+            } else {
+                echo 'No existen parametros en la URL';
+            }
+            ?>
+        </p>
+    </div>
+    <hr>
     
 </body>
 </html>
