@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <?php
-    header("Content-Type: application/json; charset=utf-8"); 
-    $data = array();
+    //header("Content-Type: application/json; charset=utf-8"); 
+    //$data = array();
 
 	if(isset($_GET['tope']))
     {
@@ -46,7 +46,7 @@
 		$link->close();
 
         /** Se devuelven los datos en formato JSON */
-        echo json_encode($data, JSON_PRETTY_PRINT);
+       // echo json_encode($data, JSON_PRETTY_PRINT);
 	}
 	?>
 <head>
@@ -59,7 +59,7 @@
 
 		<br/>
 		
-		<?php if( isset($row) ) : ?>
+	<?php if( isset($row) ) :            ?>
 
 			<table class="table">
 				<thead class="thead-dark">
@@ -75,23 +75,28 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row"><?= $row['id'] ?></th>
-						<td><?= $row['nombre'] ?></td>
-						<td><?= $row['marca'] ?></td>
-						<td><?= $row['modelo'] ?></td>
-						<td><?= $row['precio'] ?></td>
-						<td><?= $row['unidades'] ?></td>
-						<td><?= utf8_encode($row['detalles']) ?></td>
-						<td><img src=<?= $row['imagen'] ?> ></td>
-					</tr>
+                <?php
+                
+                    foreach($data as $key => $value){
+					    echo '<tr>';
+						echo '<th scope=value>' . $value["id"] . '</th>';
+						echo '<td>' . $value["nombre"] . ' </td>';
+                        echo '<td>' . $value["marca"] . ' </td>';
+                        echo '<td>' . $value["modelo"] . ' </td>';
+                        echo '<td>' . $value["precio"] . ' </td>';
+                        echo '<td>' . $value["unidades"] . ' </td>';
+                        echo '<td>' . $value["detalles"] . ' </td>';
+						echo '<td>' . "<img width= 100 height= 126 src= $value[imagen] >" . '</td>';
+					    echo "</tr>";
+                }
+                ?>
 				</tbody>
 			</table>
 
 		<?php elseif(!empty($id)) : ?>
 
 			 <script>
-                alert('El id del producto no existe');
+                alert('El ID del producto no existe');
              </script> 
 
 		<?php endif; ?>
