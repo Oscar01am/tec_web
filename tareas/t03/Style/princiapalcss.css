@@ -1,0 +1,33 @@
+
+header{
+    background-color: #72b2ab;
+    text-align: center;
+    width: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 60px;
+    font-size: 40px;
+    
+}
+
+#logo{
+    width: 9%;
+    height: 50px;
+}
+
+.imagenes{
+    position: relative;
+    left: 15%;
+    top: 100px;
+}
+main{
+    width: 100%;
+    height: 80%;
+}
+a{
+    text-decoration: none;
+}
+#p{
+    position: relative;
+    left: 20%;
+    font-size: larger;
+}
