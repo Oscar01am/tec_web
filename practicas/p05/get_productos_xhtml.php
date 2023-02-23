@@ -91,7 +91,7 @@
 		<?php elseif(!empty($id)) : ?>
 
 			 <script>
-                alert('El ID del producto no existe');
+                alert('El id del producto no existe');
              </script> 
 
 		<?php endif; ?>
