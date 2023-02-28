@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentencia do-while</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var valor;
+        do{
+            valor = prompt('Ingresa un valor entre 0 y 999:', '');
+            valor = parseInt(valor);
+            document.write('El valor '+valor+' tiene ');
+            if (valor<10){
+                document.write('Tiene 1 dígitos')
+            }
+            else{
+                if (valor<100) {
+                    document.write('Tiene 2 dígitos');
+                }
+                else{
+                    document.write('Tiene 3 dígitos');
+                }
+            }
+            document.write('<br>');
+        }while(valor!=0);
+    </script>
+</body>
+</html>

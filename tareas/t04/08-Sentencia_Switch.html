@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentencia Switch</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var valor;
+        valor = prompt('Ingresar un valor comprendido entre 1 y 5:', '' );
+        //Convertimos a entero
+        valor = parseInt(valor);
+        switch (valor) {
+            case 1: document.write('uno');
+            break;
+            case 2: document.write('dos');
+            break;
+            case 3: document.write('tres');
+            break;
+            case 4: document.write('cuatro');
+            break;
+            case 5: document.write('cinco');
+            break;
+            default:document.write('debe ingresar un valor comprendido entre 1 y 5.');
+        }
+    </script>
+</body>
+</html>

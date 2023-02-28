@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retorno de valor</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function convertirCastellano(x) {
+            if(x==1)
+                return "uno";
+            else
+                if(x==2)
+                    return "dos";
+                    else
+                        if(x==3)
+                            return "tres";
+                        else
+                            if(x==4)
+                                return "cuatro";
+                            else
+                                if(x==5)
+                                    return "cinco";
+                                else
+                                    return "valor incorrecto";
+            }
+            var valor = prompt("Ingresa un valor entre 1 y 5", "");
+            valor = parseInt(valor);
+            var r = convertirCastellano(valor);
+            document.write(r);
+    </script>
+</body>
+</html>
