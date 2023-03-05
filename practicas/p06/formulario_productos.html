@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario pra insertar nuevos productos a la base de datos</title>
+</head>
+<body>
+    <h1 aling="center">Insertar los datos del nuevo producto a registar</h1>
+    <p>Capturar los datos correctamente, evitando dejar espacios vacios.</p>
+    <form action="http://localhost/tecnologiasWeb/practicas/p06/set_producto_v2.php" onsubmit="return validacion()" method="post">
+        <fieldset>
+            <legend>Datos a insertar del  nuevo producto</legend>
+            <ul>
+                <li><label for="form-name">Nombre: <input type="text" id="nom" name="nom"></label></li>
+                <li><label for="form-marca">Marca: <input type="text" name="marca" id="marca"></label></li>
+                <li><label for="form-modelo">Modelo: <input type="text" name="modelo" id="modelo"></label></li>
+                <li><label for="form-precio">Precio: <input type="text" name="precio" id="precio"></label></li>
+                <li><label for="detalles">Detalles: <input type="text" name="detalles" id="detalles"></label></li>
+                <li><label for="form-unidades">Unidades: <input type="text" name="unidades" id="unidades"></label></li>
+                <li><label for="form-imagen">Imagen: <input type="text" name="imagen" id="imagen"></label></li>
+            </ul>
+        </fieldset>
+        <p>
+            <input type="submit" value="Insertar">
+            <input type="reset">
+        </p>
+    </form>
+
+    <script>
+        function validacion(){
+
+            var validar = true;
+
+            var Nombre = document.getElementById("nom").value;
+            var Marca = document.getElementById("marca").value;
+            var Modelo = document.getElementById("modelo").value;
+            var Precio = document.getElementById("precio").value;
+            var Detalles = document.getElementById("detalles").value;
+            var Unidades = document.getElementById("unidades").value;
+            var Imagen = document.getElementById("imagen").value;
+
+            var nom = /^[a-zA-Z ]+$/;
+            var marca = /^[-a-zA-Z0-9 ]+$/;
+            var model = /^[-a-zA-Z0-9 ]+$/;
+            var price = /^[0-9.,]+$/;
+            var details = /^[a-zA-Z0-9.%:, ]+$/;
+            var units = /^[0-9]+$/;
+            // var image = /^[-a-zA-Z0-9./_]+$/;
+
+            if (Nombre == "" || Marca == "" || Modelo == "" || Precio == "" || Detalles == "" || Unidades == "" || Imagen == ""){
+                alert("Hay campos vacios sin rellenar, favor de verificarlos y volver a intenter.");
+            }else if (nom.test(Nombre) != true){
+                validar = false;
+                alert("Se encontraron caracteres invalidos en el campo Nombre, favor de verificar.");
+            }else if (marca.test(Marca) != true){
+                validar = false;
+                alert("Se encontraron caracteres invalidos en el campo Marca, favor de verificar.");
+            }else if (model.test(Modelo) != true){
+                validar = false;
+                alert("Se encontraron caracteres invalidos en el campo Modelo, favor de verificar.");
+            }else if (price.test(Precio) != true){
+                validar = false;
+                alert("Se encontraron caracteres invalidos en el campo Precio, favor de verificar.");
+            }else if (details.test(Detalles) != true){
+                validar = false;
+                alert("Se encontraron caracteres invalidos en el campo Detalles, favor de verificar.");
+            }else if (units.test(Unidades) != true){
+                validar = false;
+                alert("Se encontraron caracteres invalidos en el campo Unidades, favor de verificar.");
+            }else if (image.test(Imagen) != true){
+                validar = false;
+                alert("Se encontraron caracteres invalidos en el campo Imagen, favor de verificar.");
+            }else if (Nombre.length > 100){
+                validar = false;
+                alert("El campo Nombre no debe superar los 100 caracteres");
+            }else if (Marca.length > 25){
+                validar = false;
+                alert("El campo Marca no debe superar los 25 caracteres");
+            }else if (Modelo.length > 25){
+                validar = false;
+                alert("El campo Modelo no debe superar los 25 caracteres");
+            }else if (Precio < 0.00){
+                validar = false;
+                alert("El campo Precio no debe ser menor a 0.00. ");
+            }else if (Detalles.length > 250){
+                validar = false;
+                alert("El campo Detalles no debe superar los 250 caracteres");
+            }else if (Unidades < 0){
+                validar = false;
+                alert("El campo Unidades no debe ser menor a 0");
+            }else if (Imagen.length > 100){
+                validar = false;
+                alert("El campo Detalles no debe superar los 100 caracteres");
+            }
+
+            return validacion();
+        }
+    </script>
+</body>
+</html>
