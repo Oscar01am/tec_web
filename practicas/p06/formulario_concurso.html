@@ -1,102 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario pra insertar nuevos productos a la base de datos</title>
-</head>
-<body>
-    <h1 aling="center">Insertar los datos del nuevo producto a registar</h1>
-    <p>Capturar los datos correctamente, evitando dejar espacios vacios.</p>
-    <form action="http://localhost/tecnologiasWeb/practicas/p06/set_producto_v2.php" onsubmit="return validacion()" method="post">
+<!DOCTYPE html >
+<html>
+
+  <head>
+    <meta charset="utf-8" >
+    <title>Registro al Concurso</title>
+    <style type="text/css">
+      ol, ul { 
+      list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
+
+    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#169;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puede ser uno de los diez afortunados ganadores.</p>
+
+    <form id="formularioTenis" action="http://localhost/buap/tecweb/practicas/p06/concurso.php" method="post">
+
+    <h2>Información de Participación</h2>
+
+      <fieldset>
+        <legend>Información Personal</legend>
+
+        <ul>
+          <li><label for="form-name">Nombre:</label> <input type="text" name="name" id="form-name"></li>
+          <li><label for="form-email">Dirección de E-mail:</label> <input type="email" name="email" id="form-email"></li>
+          <li><label for="form-tel">Número Telefónico:</label> <input type="tel" name="phone" id="form-tel"></li>
+          <li><label for="form-story">Mis tenis son tan feos porque...</label><br><textarea name="story" rows="4" cols="60" id="form-story" placeholder="No más de 300 caracteres de longitud"></textarea></li>
+        </ul>
+      </fieldset>
+
+      <h2>Diseña tus Mike personalizados:</h2>
+
+      <fieldset>
+        <legend>Diseño personalizado del Tenis</legend>
+
         <fieldset>
-            <legend>Datos a insertar del  nuevo producto</legend>
-            <ul>
-                <li><label for="form-name">Nombre: <input type="text" id="nom" name="nom"></label></li>
-                <li><label for="form-marca">Marca: <input type="text" name="marca" id="marca"></label></li>
-                <li><label for="form-modelo">Modelo: <input type="text" name="modelo" id="modelo"></label></li>
-                <li><label for="form-precio">Precio: <input type="text" name="precio" id="precio"></label></li>
-                <li><label for="detalles">Detalles: <input type="text" name="detalles" id="detalles"></label></li>
-                <li><label for="form-unidades">Unidades: <input type="text" name="unidades" id="unidades"></label></li>
-                <li><label for="form-imagen">Imagen: <input type="text" name="imagen" id="imagen"></label></li>
+          <legend>Color <em>(escoge uno)</em>:</legend>
+          <ul>
+            <li><label><input type="radio" name="color" value="red"> Rojo</label></li>
+            <li><input type="radio" name="color" value="blue" checked=""> Azul</li>
+            <li><input type="radio" name="color" value="black"> Negro</li>
+            <li><input type="radio" name="color" value="silver"> Plateado</li>
             </ul>
         </fieldset>
-        <p>
-            <input type="submit" value="Insertar">
-            <input type="reset">
-        </p>
+
+        <fieldset>
+          <legend>Características <em>(escoge tatnas como quieras)</em></legend>
+          <ul>
+            <li><input type="checkbox" name="features[]" value="laces"> Cordones Brillantes</li>
+            <li><input type="checkbox" name="features[]" value="logo" checked> Logo Metálico</li>
+            <li><input type="checkbox" name="features[]" value="heels"> Suela Luminosa</li>
+            <li><input type="checkbox" name="features[]" value="mp3"> WiFi-integrado</li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Talla</legend>
+          <p>Las medidas reflejan el estándar masculino: 
+            <select name="size" size="1">
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+            </select>
+          </p>
+        </fieldset>
+
+      </fieldset>
+
+      <p>
+        <input type="submit" value="¡Chidos mis Tenis!">
+        <input type="reset">
+      </p>
+
     </form>
-
-    <script>
-        function validacion(){
-
-            var validar = true;
-
-            var Nombre = document.getElementById("nom").value;
-            var Marca = document.getElementById("marca").value;
-            var Modelo = document.getElementById("modelo").value;
-            var Precio = document.getElementById("precio").value;
-            var Detalles = document.getElementById("detalles").value;
-            var Unidades = document.getElementById("unidades").value;
-            var Imagen = document.getElementById("imagen").value;
-
-            var nom = /^[a-zA-Z ]+$/;
-            var marca = /^[-a-zA-Z0-9 ]+$/;
-            var model = /^[-a-zA-Z0-9 ]+$/;
-            var price = /^[0-9.,]+$/;
-            var details = /^[a-zA-Z0-9.%:, ]+$/;
-            var units = /^[0-9]+$/;
-            // var image = /^[-a-zA-Z0-9./_]+$/;
-
-            if (Nombre == "" || Marca == "" || Modelo == "" || Precio == "" || Detalles == "" || Unidades == "" || Imagen == ""){
-                alert("Hay campos vacios sin rellenar, favor de verificarlos y volver a intenter.");
-            }else if (nom.test(Nombre) != true){
-                validar = false;
-                alert("Se encontraron caracteres invalidos en el campo Nombre, favor de verificar.");
-            }else if (marca.test(Marca) != true){
-                validar = false;
-                alert("Se encontraron caracteres invalidos en el campo Marca, favor de verificar.");
-            }else if (model.test(Modelo) != true){
-                validar = false;
-                alert("Se encontraron caracteres invalidos en el campo Modelo, favor de verificar.");
-            }else if (price.test(Precio) != true){
-                validar = false;
-                alert("Se encontraron caracteres invalidos en el campo Precio, favor de verificar.");
-            }else if (details.test(Detalles) != true){
-                validar = false;
-                alert("Se encontraron caracteres invalidos en el campo Detalles, favor de verificar.");
-            }else if (units.test(Unidades) != true){
-                validar = false;
-                alert("Se encontraron caracteres invalidos en el campo Unidades, favor de verificar.");
-            }else if (image.test(Imagen) != true){
-                validar = false;
-                alert("Se encontraron caracteres invalidos en el campo Imagen, favor de verificar.");
-            }else if (Nombre.length > 100){
-                validar = false;
-                alert("El campo Nombre no debe superar los 100 caracteres");
-            }else if (Marca.length > 25){
-                validar = false;
-                alert("El campo Marca no debe superar los 25 caracteres");
-            }else if (Modelo.length > 25){
-                validar = false;
-                alert("El campo Modelo no debe superar los 25 caracteres");
-            }else if (Precio < 0.00){
-                validar = false;
-                alert("El campo Precio no debe ser menor a 0.00. ");
-            }else if (Detalles.length > 250){
-                validar = false;
-                alert("El campo Detalles no debe superar los 250 caracteres");
-            }else if (Unidades < 0){
-                validar = false;
-                alert("El campo Unidades no debe ser menor a 0");
-            }else if (Imagen.length > 100){
-                validar = false;
-                alert("El campo Detalles no debe superar los 100 caracteres");
-            }
-
-            return validacion();
-        }
-    </script>
-</body>
+  </body>
 </html>
