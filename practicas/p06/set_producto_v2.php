@@ -49,7 +49,7 @@
             $resultadoMarca = (integer) $fetchCheckMarca;
 
             /** Crear una tabla que no devuelve un conjunto de resultados */
-            $sql = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}')"; 
+            $sql = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', 0)"; 
             if ($resultadoModel >= 1 && $resultadoMarca >= 1){
                 echo "<h1>No se ha podido guardar los datos, la marca y modelo ya existen</h1>";
             }else{
