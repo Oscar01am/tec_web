@@ -72,28 +72,8 @@
             }else if (image.test(Imagen) != true){
                 validar = false;
                 alert("Se encontraron caracteres invalidos en el campo Imagen, favor de verificar.");
-            }else if (Nombre.length > 100){
-                validar = false;
-                alert("El campo Nombre no debe superar los 100 caracteres");
-            }else if (Marca.length > 25){
-                validar = false;
-                alert("El campo Marca no debe superar los 25 caracteres");
-            }else if (Modelo.length > 25){
-                validar = false;
-                alert("El campo Modelo no debe superar los 25 caracteres");
-            }else if (Precio < 0.00){
-                validar = false;
-                alert("El campo Precio no debe ser menor a 0.00. ");
-            }else if (Detalles.length > 250){
-                validar = false;
-                alert("El campo Detalles no debe superar los 250 caracteres");
-            }else if (Unidades < 0){
-                validar = false;
-                alert("El campo Unidades no debe ser menor a 0");
-            }else if (Imagen.length > 100){
-                validar = false;
-                alert("El campo Detalles no debe superar los 100 caracteres");
             }
+           
 
             return validacion();
         }
