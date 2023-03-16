@@ -11,27 +11,27 @@
 
         <p>Captura todos los datos correctamente</p>
 
-        <form id="formularioProductos" onsubmit="return validar()" action="http://localhost/tecnologiasWeb/practicas/p07/set_producto_v3.php" method="post">
+        <form id="formularioProductos" onsubmit="return validar()" action="http://localhost/tecnologiasWeb/practicas/p07/set_producto_v2.php" method="post">
 
             <fieldset>
                 <legend>Nuevo Producto</legend>
                 <ul>
-                    <li><label>Nombre: <input type="text" id="nom" name="nom"></input></label></li></br>
+                    <li><label>Nombre: <input type="text" id="form-name" name="form-name" value="<?=$_POST['nombre-form']?>"></input></label></li></br>
                     <li><label>Marca: </label>
                         <ul>
-                            <li><label>Funko<input type="radio" id="marca" name="marca" value="Funko"></input></label></li>
-                            <li><label>Funko shop<input type="radio" id="marca" name="marca" value="Funko shop"></input></label></li>
-                            <li><label>Funko shop pika<input type="radio" id="marca" name="marca" value="Funko shop pika"></input></label></li>
-                            <li><label>Funko Pokemon<input type="radio" id="marca" name="marca" value="Funko Pokemon"></input></label></li>
-                            <li><label>MARVEL<input type="radio" id="marca" name="marca" value="MARVEL"></input></label></li>
-                            <li><label>Funko avatar<input type="radio" id="marca" name="marca" value="Funko avatar"></input></label></li></br>
+                            <li><label>Funko<input type="radio" id="form-marca" name="form-marca" value="Funko"></input></label></li>
+                            <li><label>Funko shop<input type="radio" id="form-marca" name="form-marca" value="Funko shop"></input></label></li>
+                            <li><label>Funko shop pika<input type="radio" id="form-marca" name="form-marca" value="Funko shop pika"></input></label></li>
+                            <li><label>Funko Pokemon<input type="radio" id="form-marca" name="form-marca" value="Funko Pokemon"></input></label></li>
+                            <li><label>MARVEL<input type="radio" id="form-marca" name="form-marca" value="MARVEL"></input></label></li>
+                            <li><label>Funko avatar<input type="radio" id="form-marca" name="form-marca" value="Funko avatar"></input></label></li></br>
                         </ul>
                     </li>
-                    <li><label>Modelo: <input type="text" id="modelo" name="modelo"></input></label></li></br>
-                    <li><label>Precio: <input type="text" id="precio" name="precio"></input></label></li></br>
-                    <li><label>Detalles: (Opcional) <input type="text" id="detalles" name="detalles"></input></label></li></br>
-                    <li><label>Unidades: <input type="text" id="unidades" name="unidades"></input></label></li></br>
-                    <li><label>Nombre del archivo de imagen: (Opcional) <input type="text" id="imagen" name="imagen"></input></label></li>
+                    <li><label>Modelo: <input type="text" id="form-model" name="form-model" value="<?=$_POST['model-form']?>"></input></label></li></br>
+                    <li><label>Precio: <input type="text" id="form-price" name="form-price" value="<?=$_POST['precio-form']?>"></input></label></li></br>
+                    <li><label>Detalles: (Opcional) <input type="text" id="form-detail" name="form-detail" value="<?=$_POST['detail-form']?>"></input></label></li></br>
+                    <li><label>Unidades: <input type="text" id="form-unit" name="form-unit" value="<?=$_POST['unit-form']?>"></input></label></li></br>
+                    <li><label>Nombre del archivo de imagen: (Opcional) <input type="text" id="form-image" name="form-image" value="<?=$_POST['image-form']?>"></input></label></li>
                 </ul>
             </fieldset>
         <p>
@@ -45,13 +45,13 @@
 
             var validacion = true;
 
-            var nombre = document.getElementById("nom").value;
-            var marca = document.getElementById("marca").value;
-            var modelo = document.getElementById("modelo").value;
-            var precio = document.getElementById("precio").value;
-            var detalles = document.getElementById("detalles").value;
-            var unidades = document.getElementById("unidades").value;
-            var imagen = document.getElementById("imagen").value;
+            var nombre = document.getElementById("form-name").value;
+            var marca = document.getElementById("form-marca").value;
+            var modelo = document.getElementById("form-model").value;
+            var precio = document.getElementById("form-price").value;
+            var detalles = document.getElementById("form-detail").value;
+            var unidades = document.getElementById("form-unit").value;
+            var imagen = document.getElementById("form-image").value;
 
             
             
@@ -133,34 +133,34 @@
                 }
             }
 
-            return validar();
+            return validacion;
         }
         </script>
         <h1 align="center">Modifica Funko</h1>
 
         <p>Captura todos los datos correctamente</p>
 
-        <form id="formularioModProductos" onsubmit="return validar2()" action="http://localhost/tecnologiasWeb/practicas/p07/set_producto_v3.php" method="post">
+        <form id="formularioModProductos" onsubmit="return validar2()" action="http://localhost/tecnologiasWeb/practicas/p07/set_producto_v2.php" method="post">
 
             <fieldset>
                 <legend>Funko existente</legend>
                 <ul>
-                    <li><label>Nombre: <input type="text" id="nom2" name="nom2"></input></label></li></br>
+                    <li><label>Nombre: <input type="text" id="form-name2" name="form-name2" value="<?=$_POST['nombre-form']?>"></input></label></li></br>
                     <li><label>Marca: </label>
                         <ul>
-                            <li><label>Funko<input type="radio" id="marca2" name="marca2" value="Funko"></input></label></li>
-                            <li><label>Funko shop<input type="radio" id="marca2" name="marca2" value="Funko shop"></input></label></li>
-                            <li><label>Funko shop pika<input type="radio" id="marca2" name="marca2" value="Funko shop pika"></input></label></li>
-                            <li><label>Funko Pokemon<input type="radio" id="marca2" name="marca2" value="Funko Pokemon"></input></label></li>
-                            <li><label>MARVEL<input type="radio" id="marca2" name="marca2" value="MARVEL"></input></label></li>
-                            <li><label>Funko avatar<input type="radio" id="marca2" name="marca2" value="Funko avatar"></input></label></li></br>
+                            <li><label>Funko<input type="radio" id="form-marca2" name="form-marca2" value="Funko"></input></label></li>
+                            <li><label>Funko shop<input type="radio" id="form-marca2" name="form-marca2" value="Funko shop"></input></label></li>
+                            <li><label>Funko shop pika<input type="radio" id="form-marca2" name="form-marca2" value="Funko shop pika"></input></label></li>
+                            <li><label>Funko Pokemon<input type="radio" id="form-marca2" name="form-marca2" value="Funko Pokemon"></input></label></li>
+                            <li><label>MARVEL<input type="radio" id="form-marca2" name="form-marca2" value="MARVEL"></input></label></li>
+                            <li><label>Funko avatar<input type="radio" id="form-marca2" name="form-marca2" value="Funko avatar"></input></label></li></br>
                         </ul>
                     </li>
-                    <li><label>Modelo: <input type="text" id="modelo2" name="modelo2"></input></label></li></br>
-                    <li><label>Precio: <input type="text" id="precio2" name="precio2"></input></label></li></br>
-                    <li><label>Detalles: (Opcional) <input type="text" id="detalles2" name="detalles2"></input></label></li></br>
-                    <li><label>Unidades: <input type="text" id="unidades2" name="unidades2"></input></label></li></br>
-                    <li><label>Nombre del archivo de imagen: (Opcional) <input type="text" id="imagen2" name="imagen2"></input></label></li>
+                    <li><label>Modelo: <input type="text" id="form-model2" name="form-model2" value="<?=$_POST['model-form']?>"></input></label></li></br>
+                    <li><label>Precio: <input type="text" id="form-price2" name="form-price2" value="<?=$_POST['precio-form']?>"></input></label></li></br>
+                    <li><label>Detalles: (Opcional) <input type="text" id="form-detail2" name="form-detail2" value="<?=$_POST['detail-form']?>"></input></label></li></br>
+                    <li><label>Unidades: <input type="text" id="form-unit2" name="form-unit2" value="<?=$_POST['unit-form']?>"></input></label></li></br>
+                    <li><label>Nombre del archivo de imagen: (Opcional) <input type="text" id="form-image2" name="form-image2" value="<?=$_POST['image-form']?>"></input></label></li>
                 </ul>
             </fieldset>
             <input type="hidden" id="id-form" name="id-form" value="<?=$_POST['id-form']?>" />
@@ -171,8 +171,8 @@
         </form>
 
         <script>
-            var radioButtons = document.getElementsByName("marca2");
-            var test = "<?=$_POST['marca'] ?>";
+            var radioButtons = document.getElementsByName("form-marca2");
+            var test = "<?=$_POST['form-marca'] ?>";
             for(var i = 0; i < radioButtons.length; i++){
                 if(radioButtons[i].value == test){
                     radioButtons[i].checked = true;
@@ -183,15 +183,15 @@
         <script>
             function validar2(){
 
-            var validacion = true;
+            var validacion2 = true;
 
-            var nombre = document.getElementById("nom2").value;
-            var marca = document.getElementById("marca2").value;
-            var modelo = document.getElementById("modelo2").value;
-            var precio = document.getElementById("precio2").value;
-            var detalles = document.getElementById("detalles2").value;
-            var unidades = document.getElementById("unidades2").value;
-            var imagen = document.getElementById("imagen2").value;
+            var nombre = document.getElementById("form-name2").value;
+            var marca = document.getElementById("form-marca2").value;
+            var modelo = document.getElementById("form-model2").value;
+            var precio = document.getElementById("form-price2").value;
+            var detalles = document.getElementById("form-detail2").value;
+            var unidades = document.getElementById("form-unit2").value;
+            var imagen = document.getElementById("form-image2").value;
 
             
             
@@ -207,7 +207,7 @@
                 validacion = false;
                 alert('Se detectaron campos requeridos vacios.');
             }
-            if(!document.querySelector('input[name="marca2"]:checked')){
+            if(!document.querySelector('input[name="form-marca2"]:checked')){
                 validacion = false;
                 alert('Debe seleccionar una marca.');
             }
@@ -259,7 +259,7 @@
             }
             if(imagen == ""){
                 if(validacion == true){
-                    document.getElementById("imagen2").value = "img/default.png";
+                    document.getElementById("form-image2").value = "img/default.png";
                 }  
             }else{
                 if(regexImage.test(imagen) != true){
@@ -268,12 +268,12 @@
                 }else{
                     if(validacion == true){
                     let imgString = "img/";
-                    document.getElementById("imagen2").value = imgString+document.getElementById("imagen2").value;
+                    document.getElementById("form-image2").value = imgString+document.getElementById("form-image2").value;
                     }
                 }
             }
 
-            return validar();
+            return validacion2;
         }
         </script>
     </body>
