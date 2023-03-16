@@ -53,8 +53,8 @@
 
 			$result->free();
 
-            foreach($row as $num => $registro) {            // Se recorren tuplas
-                foreach($registro as $key => $value) {      // Se recorren campos
+            foreach($row as $num => $registro) {         
+                foreach($registro as $key => $value) {      
                     $data[$num][$key] = utf8_encode($value);
                 }
             }
@@ -158,7 +158,7 @@
                 form.appendChild(imageIn);
 
                 form.method = 'POST';
-                form.action = 'http://localhost/tecnologiasWeb/practicas/p07/formulario_productos_v2.php';  
+                form.action = 'http://localhost/tecnologiasweb/practicas/p07/fromulario_productos_v2.php';  
 
                 document.body.appendChild(form);
                 form.submit();
