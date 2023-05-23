@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+
+<cinefanatico>
+
+    <tarjeta noserie="7480923" visitas="80" puntos="643">
+
+        <nombre>Oscar Díaz Amaro</nombre>
+        <correo>Oscaramaro.01@gmail.com</correo>
+        <telefono tipo="movil">2229625211</telefono>
+
+    </tarjeta>
+
+    <tarjeta noserie="1412235" visitas="97" puntos="710">
+
+        <nombre>Daniel faustino</nombre>
+        <correo>da_fa54@gmail.com</correo>
+        <telefono tipo="movil">5536278311</telefono>
+
+    </tarjeta>
+
+    <tarjeta noserie="5849762" visitas="34" puntos="507">
+
+        <nombre>Luis Angel Montiel</nombre>
+        <correo>montiel_angel@hotmail.com</correo>
+        <telefono tipo="casa">2210282179</telefono>
+
+    </tarjeta>
+
+        <tarjeta noserie="7847330" visitas="85" puntos="944">
+
+        <nombre>Mauricio Montesino</nombre>
+        <correo>Monte_mau@icloud.com</correo>
+        <telefono tipo="casa">8641458305</telefono>
+
+    </tarjeta>
+
+        <tarjeta noserie="6512964" visitas="18" puntos="211">
+
+        <nombre>Martin Ojeda</nombre>
+        <correo>Ojeda_mar@gmail.com</correo>
+        <telefono tipo="movil">2272179255</telefono>
+
+    </tarjeta>
+
+</cinefanatico>

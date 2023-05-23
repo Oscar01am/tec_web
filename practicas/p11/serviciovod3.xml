@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogoVOD>
+
+    <cuenta correo = "arruchaedu@gmail.com">
+
+        <perfiles>
+
+            <perfil usuario = "Elmer Homero" idioma = "Español" />
+            <perfil usuario = "Furro Killer" idioma = "Inglés" />
+
+        </perfiles>
+
+    </cuenta>
+
+    <contenido>
+
+        <peliculas>
+
+            <genero nombre = "Terror">
+                
+                <titulo duracion= "3 hrs">&lt;video id="11"&gt;&amp;lt;&lt;/video&gt;
+                    
+                    <nombre>Anabell</nombre>
+                    
+                </titulo>
+
+                <titulo duracion= "2 hrs"><![CDATA[<video id="11">&lt;</video>]]>
+                    
+                    <nombre>Chuky</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion= "1 hr y 50 min">
+                    
+                    <nombre>La noche del demonio</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion= "2 hrs y 30 min">
+                    
+                    <nombre>El exorcismo</nombre>
+                    
+                </titulo>
+
+            </genero>
+
+            <genero nombre = "Ciencia ficcion">
+                
+                <titulo duracion= "2 hrs y 30 min">
+                    
+                    <nombre>Harry potter</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion= "2 hrs y 30 min">
+                    
+                    <nombre>Percy jacksok</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion= "1 hr y 45 min">
+                    
+                    <nombre>Avatar</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion= "3 hrs y 24 min">
+                    
+                    <nombre>Airon man</nombre>
+                    
+                </titulo>
+                
+            </genero>
+
+        </peliculas>
+
+        <programas>
+
+            <genero nombre = "Entretenimiento">
+                
+                <titulo duracion = "1 hrs">
+                    
+                    <nombre>Materchef</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion = "1 hrs">
+                    
+                    <nombre>La academia</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion = "1 hrs y 30 min">
+                    
+                    <nombre>100 mexicanos dijeron</nombre>
+                    
+                </titulo>
+                
+                <titulo duracion = "1 hrs">
+                    
+                    <nombre>La familia peluche</nombre>
+                    
+                </titulo>                                                
+            </genero>
+                <genero nombre = "Noticias">
+                    
+                    <titulo duracion = "1 hrs y 30 min">
+                        
+                        <nombre>N+</nombre>
+                        
+                    </titulo>
+                    
+                    <titulo duracion = "1 hr 30 min">
+                        
+                        <nombre>Tercer grado</nombre>
+                        
+                    </titulo>
+                    
+                    <titulo duracion = "1 hr">
+                        
+                        <nombre>En punto</nombre>
+                        
+                    </titulo>
+                    
+                    <titulo duracion = "1 hr y 40 min">
+                        
+                        <nombre>Milenio</nombre>
+                        
+                    </titulo>                                                
+                    
+                </genero>           
+
+        </programas>
+
+    </contenido>
+</catalogoVOD>
