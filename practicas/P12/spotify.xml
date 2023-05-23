@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="spotify_v2.xsd">
+    <cuenta id="1" plan="premium" fechaIni="2022-02-01" fechaFin="2023-02-01">
+        <nombre>Oscar Diaz</nombre>
+        <correo>Oscaramaro.01@gmail.com</correo>
+        <telefono tipo="movil">222 678 4269</telefono>
+    </cuenta>
+    <cuenta id="2" plan="familiar" fechaIni="2023-01-21" fechaFin="2024-01-21">
+        <nombre>Daniel Faustino</nombre>
+        <correo>daniel98fa@gmail.com</correo>
+        <telefono tipo="casa">222 435 2674</telefono>
+    </cuenta>
+</spotify>

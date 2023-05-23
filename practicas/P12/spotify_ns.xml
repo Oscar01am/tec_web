@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tw:spotify xmlns:tw="http://tecnologiasweb.com.mx" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://tecnologiasweb.com.mx spotify_ns.xsd">
+    <tw:cuenta tw:id="1" tw:plan="premium" tw:fechaIni="2022-02-01" tw:fechaFin="2023-02-01">
+        <tw:nombre>Oscar Diaz</tw:nombre>
+        <tw:correo>Oscaramaro.01@gmail.com</tw:correo>
+        <tw:telefono tw:tipo="movil">222 678 4269</tw:telefono>
+    </tw:cuenta>
+    <tw:cuenta tw:id="2" tw:plan="familiar" tw:fechaIni="2023-01-21" tw:fechaFin="2024-01-21">
+        <tw:nombre>Daniel Faustino</tw:nombre>
+        <tw:correo>daniel98fa@gmail.com</tw:correo>
+        <tw:telefono tw:tipo="casa">222 435 2674</tw:telefono>
+    </tw:cuenta>
+</tw:spotify>
