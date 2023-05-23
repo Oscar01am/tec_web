@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    
+    <xsd:simpleType name="planType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="free"/>
+            <xsd:enumeration value="premium"/>
+            <xsd:enumeration value="familiar"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="emailType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-z,A-Z,0-9,\.]+@[a-z]+\.[a-z]{2,3}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="listIntType">
+        <xsd:list itemType="xsd:int"/>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="numTelType">
+        <xsd:restriction base="listIntType">
+            <xsd:maxLength value="3"/>
+            <xsd:minLength value="3"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="telefonoType">
+        <xsd:simpleContent>
+            <xsd:extension base="numTelType">
+                <xsd:attribute name="tipo" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <xsd:group name="cuentaElements">
+        <xsd:sequence>
+            <xsd:element name="nombre" type="xsd:string"/>
+            <xsd:element name="correo" type="emailType"/>
+            <xsd:element name="telefono" type="telefonoType" minOccurs="0"/> 
+        </xsd:sequence>
+    </xsd:group>
+    
+    <xsd:attributeGroup name="cuentaAttributes">
+        <xsd:attribute name="id" type="xsd:string" use="required"/>
+        <xsd:attribute name="plan" type="planType" use="required"/>
+        <xsd:attribute name="fechaIni" type="xsd:string" use="optional"/>
+        <xsd:attribute name="fechaFin" type="xsd:string" use="optional"/>
+    </xsd:attributeGroup>
+    
+    <xsd:complexType name="cuentaType">
+        <xsd:group ref="cuentaElements"/>
+        <xsd:attributeGroup ref="cuentaAttributes"/>
+    </xsd:complexType>
+    
+    <xsd:complexType name="spotifyType">
+        <xsd:sequence>
+            <xsd:element name="cuenta" type="cuentaType" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="version"/>
+    </xsd:complexType>
+    
+    <xsd:element name="spotify" type="spotifyType"/>
+</xsd:schema>
