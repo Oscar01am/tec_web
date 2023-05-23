@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vod:CatalogoVOD Version="2.0"
+    xmlns:vod="http://starfire.com/vod"
+    xmlns:menu="http://starfire.com/vod/menu"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://starfire.com/vod serviciovod_ns_vod.xsd http://starfire.com/vod/menu serviciovod_ns_menu.xsd">
+    <vod:cuenta correo="carlos.conderl@correo.buap.mx">
+        <vod:perfiles>
+            <vod:perfil usuario="Oscar01am" idioma="Español"/>
+            <vod:perfil usuario="Daniel78fa" idioma="Español"/>
+        </vod:perfiles>
+    </vod:cuenta>
+    <menu:contenido>
+        <menu:peliculas region="USA">
+            <menu:genero nombre="Ciencia Ficcion">
+                <menu:titulo duracion="3:30">HARRY POTTER</menu:titulo>
+                <menu:titulo duracion="2:40">PERCY JACKSON</menu:titulo>
+            </menu:genero>
+            <menu:genero nombre="Terror">
+                <menu:titulo duracion="2:40">ANABELL</menu:titulo>
+                <menu:titulo duracion="3:47">EL CONJURO 1</menu:titulo>
+            </menu:genero>
+        </menu:peliculas>
+        <menu:series region="MEX">
+            <menu:genero nombre="Comedia">
+                <menu:titulo duracion="1:30">1000 MEXICANOS DIJERON</menu:titulo>
+                <menu:titulo duracion="1:40">LA FAMILIA PELUCHE</menu:titulo>
+            </menu:genero>
+            <menu:genero nombre="Suspenso">
+                <menu:titulo duracion="1:30">Stranger Things</menu:titulo>
+                <menu:titulo duracion="1:45">Criminal Minds</menu:titulo>
+            </menu:genero>
+        </menu:series>
+    </menu:contenido>
+</vod:CatalogoVOD>

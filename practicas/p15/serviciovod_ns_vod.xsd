@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vod="http://starfire.com/vod"
+    targetNamespace="http://starfire.com/vod" elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xsd:element name="CatalogoVOD">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="cuenta" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="perfiles" minOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="perfil" maxOccurs="unbounded"
+                                            minOccurs="1">
+                                            <xsd:complexType>
+                                                <xsd:attribute name="usuario" use="required"
+                                                    type="xsd:string"/>
+                                                <xsd:attribute name="idioma" use="required"
+                                                    type="xsd:string"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="correo" type="xsd:string" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:any maxOccurs="1" minOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="Version" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
