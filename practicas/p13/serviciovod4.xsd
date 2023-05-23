@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="CatalogoVOD">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="cuenta" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="perfiles" minOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="perfil" maxOccurs="unbounded"
+                                            minOccurs="1">
+                                            <xsd:complexType>
+                                                <xsd:attribute name="usuario" use="required"
+                                                    type="xsd:string"/>
+                                                <xsd:attribute name="idioma" use="required"
+                                                    type="xsd:string"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="correo" type="xsd:string" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="contenido">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="peliculas" minOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="genero" maxOccurs="unbounded"
+                                            minOccurs="1">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="titulo" maxOccurs="unbounded"
+                                                        minOccurs="1">
+                                                        <xsd:complexType>
+                                                            <xsd:simpleContent>
+                                                                <xsd:extension base="xsd:string">
+                                                                    <xsd:attribute name="duracion" use="required"
+                                                                        type="xsd:string"/>
+                                                                </xsd:extension>
+                                                            </xsd:simpleContent>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                                <xsd:attribute name="nombre" use="required"
+                                                    type="xsd:string"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="region" use="required" type="xsd:string"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="series">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="genero" maxOccurs="unbounded"
+                                            minOccurs="1">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="titulo" maxOccurs="unbounded"
+                                                        minOccurs="1">
+                                                        <xsd:complexType>
+                                                            <xsd:simpleContent>
+                                                                <xsd:extension base="xsd:string">
+                                                                    <xsd:attribute name="duracion" use="required"
+                                                                        type="xsd:string"/>
+                                                                </xsd:extension>
+                                                            </xsd:simpleContent>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                                <xsd:attribute name="nombre" use="required"
+                                                    type="xsd:string"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="region" use="required" type="xsd:string"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="Version" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

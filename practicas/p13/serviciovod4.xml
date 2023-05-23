@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogovod.xsl"?>
+<CatalogoVOD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="serviciovod4.xsd" Version="1.0">
+    <cuenta correo="oscaramaro.01@gmail.com">
+        <perfiles>
+            <perfil usuario="Oscar" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="MEX">
+            <genero nombre="Ciencia Ficcion">
+                <titulo duracion="2:37">Harry Potter</titulo>
+                <titulo duracion="2:04">Percy jackson</titulo>
+            </genero>
+            <genero nombre="Terror">
+                <titulo duracion="2:30">La noche del demonio</titulo>
+                <titulo duracion="1:45">Anabell</titulo>
+            </genero>
+        </peliculas>
+        <series region="USA">
+            <genero nombre="Noticias">
+                <titulo duracion="1:00">N+</titulo>
+                <titulo duracion="1:00">Milenio</titulo>
+            </genero>
+            <genero nombre="Entretenimiento">
+                <titulo duracion="1:20">La familia peluche</titulo>
+                <titulo duracion="1:30">100 mexicanos dijeron</titulo>
+            </genero>
+        </series>
+    </contenido>
+</CatalogoVOD>
